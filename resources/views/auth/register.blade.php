@@ -52,6 +52,29 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="area" class="col-md-4 col-form-label text-md-right">{{ __('Area') }}</label>
+
+                            <div class="col-md-6">
+                                <!--
+                                <input id="area" type="email" class="form-control @error('area') is-invalid @enderror" name="area" value="{{ old('area') }}" required autocomplete="area">
+                                -->
+                                <select id="area" class="form-control @error('area') is-invalid @enderror" name="area" value="{{ old('area') }}" required autocomplete="area">
+                                    <option value="area1">Area 1</option>
+                                    <option value="area2">Area 2</option>
+                                    <option value="area3">Area 3</option>
+                                    <option value="area4">Area 4</option>
+                                    <option value="area5">Area 5</option>
+                                </select>
+                                @error('area')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

@@ -16,11 +16,12 @@ class AppointmentController extends Controller
 	}
 	public function storeappointment(request $request)
 	{
+		$user = User::where(['area' => Auth::User()->area, 'usertype' => 'doctor'])->first();
 		$appointment = new Appointments;
     	$appointment->date = $request->input('date');
     	$appointment->time = $request->input('time');
     	$appointment->patient_id = Auth::User()->id;
-    	$appointment->doctor_id = 6;
+    	$appointment->doctor_id = $user->id;
     	$appointment->save();
     	return redirect('/get-appointment')->with('status','Your appointment is submitted');
 	}

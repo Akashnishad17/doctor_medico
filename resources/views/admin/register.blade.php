@@ -24,6 +24,7 @@
                       <th>Name</th>
                       <th>Phone</th>
                       <th>Email</th>
+                      <th>Area</th>
                       <th>Usertype</th>
                       <th>Edit</th>
                       <th>Delete</th>
@@ -35,6 +36,7 @@
                         <td>{{ $row->name }}</td>
                         <td>{{ $row->phone }}</td>
                         <td>{{ $row->email }}</td>
+                        <td>{{ $row->area }}</td>
                         <td>{{ $row->usertype }}</td>
                         <td>
                           <a href="/role-edit/{{ $row->id }}" class="btn btn-success">EDIT</a>

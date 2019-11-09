@@ -85,6 +85,13 @@
               <p>Dashboard</p>
             </a>
           </li>
+
+          <li class="{{ 'appointment-notifications' == request()->path() ? 'active' : '' }}">
+            <a href="/appointment-notifications">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Appointment notification</p>
+            </a>
+          </li>
           @endif
           <!--
           <li>
@@ -149,6 +156,8 @@
               <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} 
+                                    <!--
+                                    <span class="caret"></span>-->
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

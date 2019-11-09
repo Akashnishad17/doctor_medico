@@ -44,4 +44,5 @@ Route::group(['middleware' => ['auth','doctor']], function(){
 	Route::get('/doctor', function () {
 		return view('doctor.dashboard');
 	});
+	Route::get('/appointment-notifications','Doctor\NotificationController@showappointment');
 });
